@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+     var arr = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
+		for (key in arr) {
+				if (arr[key] != "Суббота" && arr[key] != "Воскресенье") {
+					document.write(arr[key] + "<br>");
+				} 
+					else {
+						document.write("<b>" + arr[key]  + "<br>");
+					}
+		}
+    </script>
+</body>
+</html>

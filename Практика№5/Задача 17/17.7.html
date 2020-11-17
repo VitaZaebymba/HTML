@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+		var arr = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
+		var day = "";
+			for (key in arr) {
+				if (arr[key] != "Вторник") {
+					document.write(arr[key] + "<br>");
+				} 
+				else {
+					day = arr[key];
+					document.write("<i>" + day + "</i>" + " "  + "<br>");
+				}
+			}
+
+    </script>
+</body>
+</html>
