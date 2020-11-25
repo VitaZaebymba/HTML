@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<style>
+		input {
+			width: 200px;
+		}
+		body { background: url(https://res.cloudinary.com/teepublic/image/private/s--HiwpgmWw--/t_Preview/b_rgb:191919,c_lpad,f_jpg,h_630,q_90,w_1200/v1545480465/production/designs/3793816_3.jpg);
+				background-size: cover;  }
+
+	</style>
+	<script>
+		function go(elem){
+			elem.value = 'Но мне нужны деньги!';
+		}
+		function stop(elem){
+			elem.value = 'У меня есть план!';
+		}
+	</script>
+</head>
+<body>
+    <input type="text" value="У меня есть план!" onfocus="go(this)" onblur="stop(this)">
+</body>
+</html>

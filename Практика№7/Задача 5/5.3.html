@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<style>
+        input {
+            width: 200px;
+        }
+    </style>
+	</head>
+<body>
+     <input type="text" value="" placeholder="Введи в меня текст!" id="test" onkeyup="func(this)">
+    <span id="Text"></span>
+    <script>
+        function func(elem) {
+            let txt = document.getElementById('Text');
+            txt.innerHTML = elem.value;
+        }
+    </script>
+</body>
+</html>

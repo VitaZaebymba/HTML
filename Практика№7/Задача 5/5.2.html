@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<style>
+        input{
+            width:100px;
+        }
+    </style>
+	</head>
+<body>
+    <input type="text" value="" id="1" />
+    <span>+</span>
+    <input type="text" value="" id="2" />
+    <span>= </span>
+    <span id="3">0</span>
+    <br />
+    <br />
+    <button id="ButtonOne" onclick="func()">Выполнить сложение</button>
+    <script>
+        let txt;
+        function func() {
+            txt1 = +document.getElementById('1').value;
+            txt2 = +document.getElementById('2').value;
+            txt3 = document.getElementById('3');
+            let sum = txt1 + txt2;
+            txt3.innerHTML = sum;
+        }
+    </script>
+</body>
+</html>

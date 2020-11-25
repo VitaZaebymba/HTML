@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+		<script>
+		function hide(){
+			elem = document.getElementById('test');
+			elem.style.display = 'none';
+		}
+		function show(){
+			elem = document.getElementById('test');
+			elem.style.display = 'inline-block';
+		}
+	</script>
+</head>
+<body>
+    <input type="text" value="..." id="test">
+	<button onclick="hide()">Точка невозврата</button>
+	<button onclick="show()">Код активации</button>
+</body>
+</html>

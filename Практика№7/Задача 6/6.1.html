@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<style>
+        input {
+            width: 200px;
+        }
+    </style>
+	</head>
+<body>
+    <p>The Witcher 3</p>
+    <p>Battlefield 1</p>
+    <p>FIFA</p>
+    <button onclick="func()">Нажмите и узнайте</button>
+
+    <script>
+        function func() {
+            let elements = document.getElementsByTagName('p');
+            for (let i = 0; i < elements.length-1; i++) {
+                elements[i].innerHTML = 'Это отличная игра!';
+            }
+        }
+    </script>
+</body>
+</html>

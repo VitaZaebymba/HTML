@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	</head>
+<body>
+    <input type="text" value="Text" id="Text" width="300" />
+    <button id="ButtonOne" onclick="func('Text')">1</button>
+    <button id="ButtonTwo" onclick="func2('Text')">2</button>
+    <script>
+        let txt;
+        function func(id) {
+            txt = document.getElementById(id);
+            txt.style.visibility = 'hidden';
+        }
+
+        function func2(id) {
+            txt = document.getElementById(id);
+            txt.style.visibility = 'visible';
+        }
+    </script>
+</body>
+</html>
