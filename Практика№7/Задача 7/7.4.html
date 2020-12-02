@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<style>
+	img{
+		height:270px;
+		width: 500px;
+		}
+	 </style>
+	</head>
+     <body onload="start()">
+        <img id="image" src="https://i.playground.ru/p/qmSuaiTYm8E79ut7zfsXkg.jpeg">
+        <script>
+            let i = 0;
+            function start(){
+                let image = document.getElementById("image");
+                window.setInterval('slide()', 1500);
+            }
+            function slide(){
+                if(i == 0){
+                    image.src = "https://www.digiseller.ru/preview/315421/p1_2775848_69ae2a6a.jpeg";
+                    i++;
+                }
+                else if(i == 1){
+                    image.src = "https://storgames.net/upload/iblock/f01/jpmuwoxohk86t4zkex4x8munphccbgbf.jpg";
+                    i++;
+                }
+                else if(i == 2){
+                    image.src = "https://www.rockstartr.com/wp-content/uploads/2020/09/rdr-2-manzara.jpg";
+                    i++;
+                }
+                else if(i == 3){
+                    image.src = "https://gamecrate.com/sites/default/files/RDR2_Screenshot%20112.jpg";
+                    i = 0;
+                }
+            }
+        </script>
+		</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<style>
+	img{
+		height:400px;
+		width: 700px;
+		}
+	 </style>
+	</head>
+     <body>
+        <p>
+            <img id="image" src="https://images.wallpapersden.com/image/download/the-witcher-3-wild-hunt-final-part-pc_ZmhrbmeUmZqaraWkpJRsa21lrWloZ2U.jpg">
+        </p>
+        <input type="submit" value="CТАРТ" onclick="start()">
+        <input type="submit" value="СТОП" onclick="stop()">
+        <script>
+            let i = 0;
+            function start(){
+                let image = document.getElementById("image");
+                window.timerID = window.setInterval('slide()', 1500);
+            }
+            function slide(){
+                if(i == 0){
+                    image.src = "https://u.kanobu.ru/longreads/2015/10/9/b521700e-b0e6-4fba-9ee8-11513256edf8.jpg";
+                    i++;
+                }
+                else if(i == 1){
+                    image.src = "https://i.playground.ru/p/MUiVxiKc13180ve3HNa2Xg.png";
+                    i++;
+                }
+                else if(i == 2){
+                    image.src = "https://pristor.ru/wp-content/uploads/2018/12/Ведьмак-3-обои-и-картинки-на-рабочий-стол-в-отличном-качестве-16.jpg";
+                    i++;
+                }
+                else if(i == 3){
+                    image.src = "https://wallpaperscave.ru/images/original/17/11-18/games-the-witcher-3-wild-hunt-1336.jpg";
+                    i++;
+                }
+                else if(i == 4){
+                    image.src = "https://img3.goodfon.ru/original/2560x1600/f/2c/the-witcher-3-wild-hunt-498.jpg";
+                    i=0;
+                }
+            }
+            
+            function stop(){
+                window.clearInterval(window.timerID);
+            }
+        </script>
+    </body>
+</html>

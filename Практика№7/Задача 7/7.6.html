@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<style>
+	#clock{
+	color: black;
+	font-size: 100px;
+	 </style>
+	</head>
+      <body onload="start()">
+        <p id="clock"></p>
+        <script>
+            function start(){
+                let dateNow = new Date();
+                let dateNight = new Date(2020, dateNow.getMonth(), dateNow.getDate()+1, 0, 0, 0);
+                let diff = Math.floor((dateNight - dateNow)/1000)
+                let hourTo = Math.floor(diff/(60*60));
+                let minuteTo = Math.floor((diff - hourTo*60*60)/60);
+                let secondTo = Math.floor(diff%60);
+                if (minuteTo < 10){
+                    minuteTo = "0" + minuteTo;
+                } 
+                if (secondTo < 10) {
+                    secondTo = "0" + secondTo;
+                }
+                document.getElementById("clock").innerHTML = hourTo + ":" + minuteTo + ":" + secondTo;
+                setTimeout("start()", 1000);
+            }
+        </script>
+    </body>
+</html>

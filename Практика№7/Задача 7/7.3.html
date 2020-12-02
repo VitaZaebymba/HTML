@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<style>
+	#clock{
+	color: black;
+	font-size: 100px;
+	 </style>
+	</head>
+<body>
+    <div id="clock"></div>
+    <script>
+        window.onload = function(){
+ window.setInterval(function(){
+      var now = new Date();
+       var clock = document.getElementById("clock");
+     clock.innerHTML = now.toLocaleTimeString();
+ }, 1000);
+};
+    </script>
+</body>
+</html>

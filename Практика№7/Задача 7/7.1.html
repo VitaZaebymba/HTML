@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	</head>
+<body>
+    <input type="text" value="0" id="Time">
+    <button onclick="start()">Запуск</button>
+
+    <script>
+        function start() {
+          window.setInterval(timer, 1000);
+        }
+        function timer() {
+          var elem = document.getElementById('Time');
+          elem.value = parseInt(elem.value) + 1;
+        }
+    </script>
+</body>
+</html>

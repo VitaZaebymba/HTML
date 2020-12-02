@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	</head>
+<body>
+    <input type="text" value="0" id="Time">
+    <button onclick="start()">Запуск</button>
+    <button onclick="stop()">Стоп</button>
+    <script>
+        function start() {     
+		window.timerId = window.setInterval(timer, 1000);
+        }
+        function timer() {
+            var elem = document.getElementById('Time');
+            elem.value = parseInt(elem.value) + 1; 
+        }
+       function stop() {
+            window.clearInterval(window.timerId);
+        }
+    </script>
+</body>
+</html>
