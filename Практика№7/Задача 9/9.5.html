@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<style>
+            body{
+                overflow:auto;
+                height: 4000px;
+            }
+            button{
+                position: fixed;
+                height: 50px;
+                width: 100px;
+                margin-top: 300px;
+                margin-left: 300px;
+            }
+        </style>
+	</head>
+ <body id="body">
+        <button onclick="scrollinfo()">Прокрутить</button> 
+        <script>
+            function scrollinfo(){
+                document.body.scrollIntoView({
+                    block:"end"
+                })
+            }
+        </script>
+    </body>
+</html>

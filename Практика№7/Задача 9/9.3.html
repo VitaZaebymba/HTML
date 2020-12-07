@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<style>
+            body{
+                overflow:auto;
+                height: 4000px;
+            }
+            div{
+                height: 1px;
+                width: 1px;
+                background-color: black;
+                margin-left: 5000px;
+            }  
+            button{
+                position: fixed;
+                height: 50px;
+                width: 100px;
+                margin-top: 300px;
+                margin-left: 300px;
+            }
+        </style>
+	</head>
+ <body id="body">
+        <div></div>
+        <button onclick="scrollinfo()">Прокрутить</button> 
+        <script>
+            function scrollinfo(){
+                window.scrollTo(300,500);
+            }
+        </script>
+    </body>
+</html>

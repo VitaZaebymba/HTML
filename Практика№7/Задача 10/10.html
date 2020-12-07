@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<style>     
+.message {
+    border: solid;
+    border-width: 1px;
+    position: relative;
+    width: 470px;
+}
+.x {
+  position: absolute;
+  font-size: 110%;
+  top: 0;
+  color: red;
+  right: 10px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+        </style>
+	</head>
+<body>
+        <div>
+            <div class="message">
+              <p>«Ведьмак 3: Дикая Охота» (англ. The Witcher 3: Wild Hunt, польск. Wiedźmin 3: Dziki Gon) — мультиплатформенная компьютерная игра 
+			  в жанре action/RPG, разработанная польской студией CD Projekt RED по мотивам серии романов «Ведьмак» польского 
+			  писателя Анджея Сапковского, выпущенная в 2015 году для Windows, PlayStation 4 и Xbox One. Игра является 
+			  продолжением компьютерных игр «Ведьмак» и «Ведьмак 2: Убийцы королей», заключительной частью трилогии.</p>
+            </div>
+            <div class="message">
+              <p>Red Dead Redemption 2 (стилизованно под Red Dead Redemption II, сокращённо RDR2) — компьютерная игра 
+			  в жанрах action-adventure и шутера от третьего лица с открытым миром, разработанная и 
+			  выпущенная Rockstar Games для консолей PlayStation 4 и Xbox One 26 октября 2018 года и для персональных 
+			  компьютеров под управлением Windows 5 ноября 2019 года. Является третьей игрой в серии Red Dead и 
+			  приквелом к Red Dead Redemption 2010 года.</p>
+            </div>
+            <div class="message">
+              <p>Cyberpunk 2077 (с англ.«Киберпанк 2077») — мультиплатформенная компьютерная игра в жанре Action/RPG, 
+			  разрабатываемая польской студией CD Projekt RED. Игра является продолжением настольной игры «Киберпанк 2020», 
+			  действия будут происходить спустя 57 лет в большом городе Найт-Сити, расположенном в штате Калифорния. 
+			  Анонс Cyberpunk 2077 состоялся 30 мая 2012 года. На E3 2018 был представлен кинематографический трейлер игры,
+			  спустя год на E3 2019 был показан ещё один трейлер и была названа дата выпуска. 
+			  Первоначально выход игры намечался на 16 апреля, однако, после нескольких переносов, выход был назначен на 10 декабря 2020 года. </p>
+            </div>
+          </div>       
+          <script>
+            let panes = document.querySelectorAll('.message');
+        
+            for(let message of panes) {
+              message.insertAdjacentHTML("afterbegin", '<button class="x">[X]</button>');
+              message.firstChild.addEventListener("click",function(){
+                message.remove();
+              });
+            }
+          </script>
+    </body>
+</html>

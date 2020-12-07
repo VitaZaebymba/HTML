@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<style>
+    .tree span:hover {
+      font-weight: bold;
+    }
+
+    .tree span {
+      cursor: pointer;
+    }
+  </style>
+	</head>
+<body>
+<ul class="tree" id="tree">
+    <li>Топ игр на ps4
+      <ul>
+        <li>Мое любимое
+          <ul>
+            <li>Red Dead Redemption II</li>
+            <li>The Witcher 3</li>
+            <li>Uncharted 4</li>
+            <li>The Last Of Us: Part II</li>
+          </ul>
+        </li>
+        <li>Топ игроков
+          <ul>
+            <li>God Of War</li>
+            <li>Death Stranding</li>
+            <li>Ghost Of Tsushima</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    </ul>
+  <script>
+    for (let li of tree.querySelectorAll('li')) {
+      let span = document.createElement('span');
+      li.prepend(span);
+      span.append(span.nextSibling);
+    }
+    tree.onclick = function(event) {
+      if (event.target.tagName != 'SPAN') {
+        return;
+      }
+      let childrenContainer = event.target.parentNode.querySelector('ul');
+      if (!childrenContainer) return;
+      childrenContainer.hidden = !childrenContainer.hidden;
+    }
+  </script>
+    </body>
+</html>

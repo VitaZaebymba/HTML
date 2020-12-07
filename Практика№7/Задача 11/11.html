@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<style>
+    body {
+  padding: 10px;
+}
+.carousel {
+  position: relative;
+  width: 200px;
+  padding: 10px 40px;
+  border: 1px #CCC;
+  border-radius: 15px;
+  background: black;
+}
+.carousel img {
+  width: 200px;
+  height: 130px;
+  display: block;
+}
+.arrow {
+  position: absolute;
+  top: 60px;
+  padding: 0;
+  background: #AFEEEE;
+  border-radius: 15px;
+  border: 1px solid black;
+  font-size: 24px;
+  line-height: 24px;
+  color: black;
+  display: block;
+}
+.arrow:focus {
+  outline: none;
+}
+.arrow:hover {
+  background: #4682B4;
+  cursor: pointer;
+}
+.back {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+.gallery {
+  width: 200px;
+  overflow: hidden;
+}
+.gallery ul {
+  height: 130px;
+  width: 9999px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: margin-left 250ms;
+  font-size: 0;
+}
+.gallery li {
+  display: inline-block;
+}
+</style>
+	</head>
+ <body>
+        <div id="carousel" class="carousel">
+    <button class="arrow back">&#171;</button>
+    <div class="gallery">
+      <ul class="images">
+        <li><img src="https://u.kanobu.ru/longreads/2015/10/9/b521700e-b0e6-4fba-9ee8-11513256edf8.jpg"></li>
+        <li><img src="https://i.playground.ru/p/MUiVxiKc13180ve3HNa2Xg.png"></li>
+        <li><img src="https://pristor.ru/wp-content/uploads/2018/12/Ведьмак-3-обои-и-картинки-на-рабочий-стол-в-отличном-качестве-16.jpg"></li>
+        <li><img src="https://wallpaperscave.ru/images/original/17/11-18/games-the-witcher-3-wild-hunt-1336.jpg"></li>
+        <li><img src="https://img3.goodfon.ru/original/2560x1600/f/2c/the-witcher-3-wild-hunt-498.jpg"></li>
+		<li><img src="https://i.playground.ru/p/3NSl8aVT-q68TIefTRf_Og.jpeg"></li>
+        <li><img src="https://ixbt.online/live/images/original/00/49/82/2020/10/20/620d7a1991.jpg"></li>
+        <li><img src="https://tesall.ru/uploaded_files/news-image/2020_6/1593206436915.jpg"></li>
+        <li><img src="https://rockstargames.su/wp-content/uploads/2018/11/Red-Dead-Redemption-2-Fogueira-e-Personagens.jpg"></li>
+        <li><img src="https://reddead2.ru/catimages/wallpapers/285.jpg"></li>
+      </ul>
+    </div>
+    <button class="arrow next">&#187;</button>
+  </div>
+  <script>
+    let width = 200; 
+    let count = 1; 
+
+    let list = carousel.querySelector('ul');
+    let listElems = carousel.querySelectorAll('li');
+
+    let position = 0; 
+
+    carousel.querySelector('.back').onclick = function() {
+      position += width * count;
+      position = Math.min(position, 0)
+      list.style.marginLeft = position + 'px';
+    };
+
+    carousel.querySelector('.next').onclick = function() {
+      position -= width * count;
+      position = Math.max(position, -width * (listElems.length - 1));
+      list.style.marginLeft = position + 'px';
+    };
+  </script>
+    </body>
+</html>

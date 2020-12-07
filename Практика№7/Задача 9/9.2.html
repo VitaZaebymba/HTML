@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<style>
+            body{
+                overflow-x: visible;
+            }
+            div{
+                height: 1px;
+                width: 1px;
+                background-color: black;
+                margin-left: 5000px;
+            }  
+            button{
+                position: fixed;
+                height: 50px;
+                width: 100px;
+                margin-top: 300px;
+                margin-left: 300px;
+            }
+        </style>
+	</head>
+<body>
+          <div></div>
+        <button onclick="scrollinfo()">Прокрути, чтобы узнать тайну</button> 
+        <script>
+            function scrollinfo(){
+                alert(window.pageXOffset);
+            }
+        </script>
+    </body>
+</html>
