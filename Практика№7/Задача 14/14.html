@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+		</head>
+<body>
+<div id="contents">
+            <a href="https://igromania-ru.turbopages.org/igromania.ru/s/article/31430/Obzor_Mafia_Definitive_Edition._Saga_o_gangsterah.html">MAFIA</a>
+            <a href="https://igromania-ru.turbopages.org/igromania.ru/s/article/31363/Obzor_Ghost_of_Tsushima._Ostrov_nevezeniya.html">Ghost of Tsushima</a>
+       </div>
+        <script>
+            contents.onclick = function(event){
+                let target = event.target.closest('a');
+                if (target && contents.contains(target)) {
+                    return handleLink();
+                }
+
+
+                function handleLink() {
+                    let href = event.target.getAttribute('href');
+                      let isLeaving = confirm('Вы действительно хотите перейти на ' + href + '?');
+                      if (!isLeaving) return false;
+                }
+
+            };
+        </script>
+    </body>
+</html>

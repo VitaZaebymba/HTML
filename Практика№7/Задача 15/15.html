@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<style>
+     #largeImg {
+                border: solid 1px #ccc;
+                width: 550px;
+                height: 400px;
+                padding: 5px;
+            }
+
+            #images a {
+                border: solid 1px #ccc;
+                width: 100px;
+                height: 100px;
+                padding: 3px;
+                margin: 2px;
+                float: left;
+            }
+            #images img {
+                width: 100px;
+                height: 100px;
+            }
+
+            #images a:hover {
+             border-color: #FF9900;
+            }
+
+            #images li {
+             list-style: none;
+            }
+
+            #images {
+                margin: 0;
+                padding: 0;
+            }
+  </style>
+	</head>
+<body>
+<p><img id="largeImg" src="https://i.playground.ru/p/NAB-VkgvXojk3XUyNduFPw.jpeg" alt="Large image"></p>
+
+        <ul id="images">
+          <li>
+            <a href="https://i.playground.ru/p/NAB-VkgvXojk3XUyNduFPw.jpeg">
+                <img src="https://i.playground.ru/p/NAB-VkgvXojk3XUyNduFPw.jpeg">
+            </a>
+          </li>
+          <li>
+            <a href="https://pbs.twimg.com/media/EDr68nJWwAAX1aP.jpg:large">
+                <img src="https://pbs.twimg.com/media/EDr68nJWwAAX1aP.jpg:large">
+            </a>
+          </li>
+          <li>
+            <a href="https://i.playground.ru/p/-lF0ml-DkVTsDtG5X6KKJQ.jpeg">
+                <img src="https://i.playground.ru/p/-lF0ml-DkVTsDtG5X6KKJQ.jpeg">
+            </a>
+          </li>
+          <li>
+            <a href="https://ps5hits.com/wp-content/uploads/2014/09/2493655373013_f4a9b8011d_o.png">
+                <img src="https://ps5hits.com/wp-content/uploads/2014/09/2493655373013_f4a9b8011d_o.png">
+            </a>
+          </li>
+          <li>
+            <a href="https://i.playground.ru/p/AbL2CcRcTkvNPY2fH_O_2Q.jpeg">
+                <img src="https://i.playground.ru/p/AbL2CcRcTkvNPY2fH_O_2Q.jpeg">
+            </a>
+          </li>
+        </ul>
+              <script>
+          images.onclick = function(event) {
+            let image = event.target.closest('a');
+            if (!image) return false;
+            showImages(image.href);
+            event.preventDefault();
+          }
+      
+          function showImages(href) {
+            largeImg.src = href;
+          }
+        </script>
+    </body>
+</html>
