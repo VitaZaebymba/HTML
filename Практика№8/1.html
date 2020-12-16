@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<style>
+           #horse {
+      position: relative;
+	  width:250px;
+	  high:250px;
+      cursor: pointer;
+    }
+        </style>
+	</head>
+<body>
+          <img id="horse" src="https://raskraskibesplatnyye.com/drawing/animals/coloring-horse-2360.jpg">
+
+  <script>
+    horse.onclick = function() {
+      let start = Date.now();
+      let timer = setInterval(function() {
+        let timePassed = Date.now() - start;
+        horse.style.left = timePassed / 5 + 'px';
+        if (timePassed > 2000) clearInterval(timer);
+      }, 20);
+    }
+  </script>
+    </body>
+</html>
